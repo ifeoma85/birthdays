@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png">
+<link rel="manifest" href="../public/site.webmanifest">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>signup</title>
+</head>
+<body>
+    <nav>
+        <a href="/"><img id="logo2" src="../public/android-chrome-192x192.png" alt="logo"></a>
+    </nav>
+    <main id="mainContainer2">
+        <%if(message != ''){%>
+            <img id="successImage" src="../public/362-3624869_icon-success-circle-green-tick-png.png" alt="successImage">
+            <h1 id="flashMessage"><%= message%></h1>
+            <p id="flashMessage2">We have sent a verification link to your email. Check your email.</p>
+        <%}else{%>
+            <h1 id="signupHeading">Signup</h1>
+            <form id="form" action="/users/signup", method="POST">
+                <label for="username">username</label>
+                <input id="username" type="text" name="userName">
+                <label  for="email">email</label>
+                <input id="email" type="email" name="email">
+                <label  for="dateOfBirth">date of birth</label>
+                <input id="dateOfBirth" type="Date" name="dateOfBirth">
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        <%}%>
+    </main>
+<footer>
+    <p>&COPY;2024 Birtthday Wisher. All rights reserved &rBarr; </p>
+</footer>
+</body>
+</html>
